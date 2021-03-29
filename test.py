@@ -42,6 +42,12 @@ def nakresli_mapu(souradnice):
   for j in ovoce:
     tabulka[j[0]][j[1]] = "?"
 
+  ovoce_souradnice1= randrange(pocet_radku)  
+  ovoce_souradnice2= randrange(pocet_sloupcu)
+  ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+
+  for i in ovoce:
+      tabulka[i[0]][i[1]] = "?"
 
   for i in range(pocet_radku):
       for j in tabulka[i]:
