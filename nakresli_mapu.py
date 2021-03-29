@@ -27,6 +27,7 @@
 #    print(j, end = " ")                   cyklu jeden seznam seznamu (reprezenuje sloupce)
 #  print()
 
+from random import randrange
 
 def nakresli_mapu(souradnice): 
   """Funkce vykresli tabulku z tecek
