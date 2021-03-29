@@ -12,7 +12,7 @@ def nakresli_mapu(souradnice):
   a na jeden bod podle zadanych souradnic vykresli
   "X" """
   tabulka = []
-  ovoce = []
+  ovoce = [(2,3)]
   pocet_radku = 10
   pocet_sloupcu = 10
 
@@ -22,6 +22,25 @@ def nakresli_mapu(souradnice):
   for i in souradnice:
       tabulka[i[0]][i[1]] = "X"
 
+  for i in ovoce:
+    tabulka[i[0]][i[1]] = "?"
+
+
+  obsahuje_ovoce = False
+  
+  for i in range(pocet_radku):
+    if "?" in tabulka[i]:
+      obsahuje_ovoce = True
+      break
+
+  if obsahuje_ovoce == False:
+    ovoce_souradnice1 = randrange(pocet_radku)
+    ovoce_souradnice2 = randrange(pocet_sloupcu)
+    del ovoce[0]
+    ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+  
+  for j in ovoce:
+    tabulka[j[0]][j[1]] = "?"
 
   ovoce_souradnice1= randrange(pocet_radku)  
   ovoce_souradnice2= randrange(pocet_sloupcu)
@@ -29,7 +48,6 @@ def nakresli_mapu(souradnice):
 
   for i in ovoce:
       tabulka[i[0]][i[1]] = "?"
-    
 
   for i in range(pocet_radku):
       for j in tabulka[i]:
@@ -84,9 +102,12 @@ souradnice = [(0, 0), (1, 0), (2, 0)]
 nakresli_mapu([(0, 0), (1, 0), (2, 0)])
 
 ## Aktualne je potreba zajistit:
+
 # 1) Nesmazani hadiho ocasu (funkce pohyb) pote co sezere ovoce 
 # (oznaceno "?")
-# 2) Pokud na mape zrovna neni zadne ovoce ("?"), vyroste na mape ovoce
-# nove (v miste,kde zrovna neni had "X")
+
+# 2) Pokud na mape zrovna neni zadne ovoce ("?"), vyroste na mape ovoce ==>> splneno castecne // potreba osetrit dopady, jakmile
+# po 30ti tazich pribyde do seznamu ovoce nove (v miste,kde zrovna neni had "X")
+
 # 3) Po kazdych 30ti tazich na mape vyroste ovoce nove 
 
