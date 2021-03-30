@@ -6,12 +6,20 @@
 
 from random import randrange,randint
 
+<<<<<<< HEAD
 def nakresli_mapu(souradnice,soucet_tahu,ovoce,pocet_tahu): 
+=======
+def nakresli_mapu(souradnice): 
+>>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
   """Funkce vykresli tabulku z tecek
   delka tabulky je urcena poctem radku a sloupcu
   a na jeden bod podle zadanych souradnic vykresli
   "X" """
   tabulka = []
+<<<<<<< HEAD
+=======
+  ovoce = [(2,3)]
+>>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
   pocet_radku = 10
   pocet_sloupcu = 10
 
@@ -37,6 +45,7 @@ def nakresli_mapu(souradnice,soucet_tahu,ovoce,pocet_tahu):
     ovoce_souradnice2 = randrange(pocet_sloupcu)
     del ovoce[0]
     ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+<<<<<<< HEAD
 
   for i in ovoce:
       tabulka[i[0]][i[1]] = "?"
@@ -46,11 +55,22 @@ def nakresli_mapu(souradnice,soucet_tahu,ovoce,pocet_tahu):
 
   if 
 
+=======
+  
+  for j in ovoce:
+    tabulka[j[0]][j[1]] = "?"
+
+>>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
   ovoce_souradnice1= randrange(pocet_radku)  
   ovoce_souradnice2= randrange(pocet_sloupcu)
   ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
 
+<<<<<<< HEAD
 
+=======
+  for i in ovoce:
+      tabulka[i[0]][i[1]] = "?"
+>>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
 
   for i in range(pocet_radku):
       for j in tabulka[i]:
