@@ -1,4 +1,3 @@
-
 #Přidej do hry hadí potravu. Tady jsou pravidla pro vegetariánského hada, ale můžeš si je změnit podle chuti:
 
 #Když had sežere ovoce, vyroste („nesmaže“ se mu ocas, tedy neprovede se to, cos přidala v projektu 3), 
@@ -6,20 +5,12 @@
 
 from random import randrange,randint
 
-<<<<<<< HEAD
-def nakresli_mapu(souradnice,soucet_tahu,ovoce,pocet_tahu): 
-=======
-def nakresli_mapu(souradnice): 
->>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
+def nakresli_mapu(souradnice,pocet_tahu,ovoce,soucet_tahu): 
   """Funkce vykresli tabulku z tecek
   delka tabulky je urcena poctem radku a sloupcu
   a na jeden bod podle zadanych souradnic vykresli
   "X" """
   tabulka = []
-<<<<<<< HEAD
-=======
-  ovoce = [(2,3)]
->>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
   pocet_radku = 10
   pocet_sloupcu = 10
 
@@ -45,32 +36,20 @@ def nakresli_mapu(souradnice):
     ovoce_souradnice2 = randrange(pocet_sloupcu)
     del ovoce[0]
     ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
-<<<<<<< HEAD
 
-  for i in ovoce:
-      tabulka[i[0]][i[1]] = "?"
+  for j in ovoce:
+      tabulka[j[0]][j[1]] = "?"
+
+  if pocet_tahu == soucet_tahu:
+      ovoce_souradnice1 = randrange(pocet_radku)
+      ovoce_souradnice2 = randrange(pocet_sloupcu)
+      ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+      
 
   for j in ovoce:
     tabulka[j[0]][j[1]] = "?"
 
-  if 
 
-=======
-  
-  for j in ovoce:
-    tabulka[j[0]][j[1]] = "?"
-
->>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
-  ovoce_souradnice1= randrange(pocet_radku)  
-  ovoce_souradnice2= randrange(pocet_sloupcu)
-  ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
-
-<<<<<<< HEAD
-
-=======
-  for i in ovoce:
-      tabulka[i[0]][i[1]] = "?"
->>>>>>> 64fb44a1f75c5017beee31c9215660f740de9782
 
   for i in range(pocet_radku):
       for j in tabulka[i]:
@@ -120,9 +99,9 @@ def pohyb(souradnice,svetova_strana):
         raise ValueError("Konec hry")
 
 
-souradnice = [(0, 0), (1, 0), (2, 0)]
+#souradnice = [(0, 0), (1, 0), (2, 0)]
 
-nakresli_mapu([(0, 0), (1, 0), (2, 0)])
+#nakresli_mapu([(0, 0), (1, 0), (2, 0)])
 
 ## Aktualne je potreba zajistit:
 
@@ -132,5 +111,4 @@ nakresli_mapu([(0, 0), (1, 0), (2, 0)])
 # 2) Pokud na mape zrovna neni zadne ovoce ("?"), vyroste na mape ovoce ==>> splneno castecne // potreba osetrit dopady, jakmile
 # po 30ti tazich pribyde do seznamu ovoce nove (v miste,kde zrovna neni had "X")
 
-# 3) Po kazdych 30ti tazich na mape vyroste ovoce nove 
-
+# 3) Po kazdych 30ti tazich na mape vyroste ovoce nove == vyreseno
