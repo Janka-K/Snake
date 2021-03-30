@@ -29,7 +29,7 @@
 
 from random import randrange
 
-def nakresli_mapu(souradnice): 
+def nakresli_mapu(souradnice,pocet_tahu,ovoce,soucet_tahu): 
   """Funkce vykresli tabulku z tecek
   delka tabulky je urcena poctem radku a sloupcu
   a na jeden bod podle zadanych souradnic vykresli
@@ -41,9 +41,10 @@ def nakresli_mapu(souradnice):
 
 
   for i in range(pocet_radku):
-    tabulka.append(["."] * pocet_sloupcu)
+      tabulka.append(["."] * pocet_sloupcu)
   
   for i in souradnice:
+<<<<<<< HEAD
     tabulka[i[0]][i[1]] = "X" 
 
   ovoce_souradnice1= randrange(pocet_radku)
@@ -53,10 +54,46 @@ def nakresli_mapu(souradnice):
   for i in ovoce:
       tabulka[i[0]][i[1]] = "?"
 
+=======
+      tabulka[i[0]][i[1]] = "X"
+
+  for i in ovoce:
+    tabulka[i[0]][i[1]] = "?"
+
+
+  obsahuje_ovoce = False
+  
+>>>>>>> vetev
   for i in range(pocet_radku):
-    for j in tabulka[i]:
-      print(j, end = " ")
-    print () # return neni potreba..pokud si funkci nevolame pres print(nakresli_mapu()),ale jen klasickym volanim ==>> none se nevypisuje
+    if "?" in tabulka[i]:
+      obsahuje_ovoce = True
+      break
+
+  if obsahuje_ovoce == False:
+    ovoce_souradnice1 = randrange(pocet_radku)
+    ovoce_souradnice2 = randrange(pocet_sloupcu)
+    del ovoce[0]
+    ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+
+  for j in ovoce:
+      tabulka[j[0]][j[1]] = "?"
+
+  if pocet_tahu == soucet_tahu:
+      ovoce_souradnice1 = randrange(pocet_radku)
+      ovoce_souradnice2 = randrange(pocet_sloupcu)
+      ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+      
+
+  for j in ovoce:
+    tabulka[j[0]][j[1]] = "?"
+
+
+
+  for i in range(pocet_radku):
+      for j in tabulka[i]:
+        print(j, end = " ")
+      print ()
+ # return neni potreba..pokud si funkci nevolame pres print(nakresli_mapu()),ale jen klasickym volanim ==>> none se nevypisuje
 
 
 

@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> vetev
 from test import pohyb,nakresli_mapu
 
 souradnice = [(0, 0), (1, 0), (2, 0)]
@@ -14,4 +18,14 @@ while True:
     svetova_strana = input(f"Zadej svetovou stranu ve forme s=sever,j=jih,v=vychod,z=zapad: ")
     pohyb(souradnice,svetova_strana)
     if soucet_tahu == pocet_tahu:
+<<<<<<< HEAD
         soucet_tahu = 0
+=======
+        soucet_tahu = 0
+
+ 
+
+
+
+
+>>>>>>> vetev
