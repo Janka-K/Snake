@@ -111,4 +111,4 @@ def pohyb(souradnice,svetova_strana):
 # 2) Pokud na mape zrovna neni zadne ovoce ("?"), vyroste na mape ovoce ==>> splneno castecne // potreba osetrit dopady, jakmile
 # po 30ti tazich pribyde do seznamu ovoce nove (v miste,kde zrovna neni had "X")
 
-# 3) Po kazdych 30ti tazich na mape vyroste ovoce nove == vyreseno
+# 3) Po kazdych 30ti tazich na mape vyroste ovoce nove ==>  vyreseno
