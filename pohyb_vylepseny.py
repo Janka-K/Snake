@@ -38,8 +38,8 @@ def pohyb(souradnice,svetova_strana):
     souradnice2 = (souradnice[-1][1])
     souradnice.append((souradnice1,souradnice2))
   
-  for i in souradnice[:-1]: # je potreba osetrit Value Error pri porovnavani souradnic
-      if i!= souradnice[-1]: #  ==>> probrat, zda zvolena metoda neni spatna..
+  for i in souradnice[:-1]: 
+      if i!= souradnice[-1]: 
           print(souradnice)
           del souradnice[0]
           print(souradnice)
