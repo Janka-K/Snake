@@ -27,6 +27,7 @@
 #    print(j, end = " ")                   cyklu jeden seznam seznamu (reprezenuje sloupce)
 #  print()
 
+from random import randrange
 
 def nakresli_mapu(souradnice): 
   """Funkce vykresli tabulku z tecek
@@ -34,15 +35,24 @@ def nakresli_mapu(souradnice):
   a na jeden bod podle zadanych souradnic vykresli
   "X" """
   tabulka = []
+  ovoce = []
   pocet_radku = 10
   pocet_sloupcu = 10
+
 
   for i in range(pocet_radku):
     tabulka.append(["."] * pocet_sloupcu)
   
   for i in souradnice:
     tabulka[i[0]][i[1]] = "X" 
-  
+
+  ovoce_souradnice1= randrange(pocet_radku)
+  ovoce_souradnice2= randrange(pocet_sloupcu)
+  ovoce.append((ovoce_souradnice1,ovoce_souradnice2))
+
+  for i in ovoce:
+      tabulka[i[0]][i[1]] = "?"
+
   for i in range(pocet_radku):
     for j in tabulka[i]:
       print(j, end = " ")
@@ -50,8 +60,6 @@ def nakresli_mapu(souradnice):
 
 
 
-  
-#nakresli_mapu([(1,1),(2,3),(3,3)])
 
 
 
